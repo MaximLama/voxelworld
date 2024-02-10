@@ -1,0 +1,95 @@
+html {
+    font-size: $font-size;
+}
+
+body {
+    background: $dark-gray;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    min-height: calc(100vh - $header-height - $footer-height);
+}
+
+.dark-btn {
+    border-radius: 1rem;
+    background: rgba(32, 33, 34, 0.7);
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+    color: $white2;
+    font-family: 'Nunito';
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.69rem;
+    cursor: pointer;
+    width: 12.5rem;
+
+    &:hover {
+        background: rgba(43, 46, 49, 0.7);
+        opacity: 1;
+    }
+
+    &:active {
+        background: rgba(32, 33, 34, 0.7);
+        opacity: 1;
+    }
+}
+
+.light-btn{
+    height: 3.13rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    background-color: $gap-gray;
+    color: $white2;
+    font-family: 'Nunito';
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.06rem;
+    opacity: 0.6;
+
+    &:hover{
+        background-color: $gray;
+        opacity: 1;
+    }
+
+    &:active{
+        background-color: $gap-gray;
+        opacity: 1;
+    }
+}
+
+.dropdown{
+    position: relative;
+
+    & .select{
+        cursor: pointer;
+    }
+
+    & &-menu{
+        position: absolute;
+        left: 0;
+        overflow: hidden;
+        overflow-y: auto;
+        z-index: 9;
+        list-style: none;
+        display: none;
+        height: 0;
+
+        & li{
+            cursor: pointer;
+        }
+    }
+}
+
+.link{
+    &:hover{
+        text-decoration: underline;
+    }
+}

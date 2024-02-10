@@ -1,0 +1,284 @@
+.catalog {
+    margin-top: 1.125rem;
+    flex-shrink: 0;
+
+    &__inner {
+        width: 78.75rem;
+    }
+
+    &__header {
+        display: flex;
+        margin-bottom: 1.25rem;
+    }
+
+    &__search {
+        display: flex;
+        align-items: center;
+        width: 52.5rem;
+        height: 3.63rem;
+        background-color: $gap-gray;
+        border-radius: 1.25rem;
+        box-sizing: border-box;
+        padding-left: 0.9375rem;
+        padding-right: 0.625rem;
+        &:has(.catalog-search__input:focus){
+            border: 0.13rem solid $cyan;
+        }
+    }
+
+    &-search {
+        &__input {
+            height: 2.25rem;
+            width: 100%;
+            margin-left: 1rem;
+
+            &,
+            &::placeholder {
+                color: $white2;
+                font-family: Poppins, sans-serif;
+                font-size: 1.5rem;
+                font-weight: 400;
+                text-align: left;
+                vertical-align: middle;
+            }
+
+            &:valid + .catalog-search__btn{
+                display: flex;
+            }
+        }
+        &__btn{
+            width: 8.75rem;
+            margin-left: 0.625rem;
+            display: none;
+        }
+    }
+
+    &__sort {
+        display: flex;
+        align-items: center;
+        background-color: $gap-gray;
+        width: 24.94rem;
+        height: 3.63rem;
+        padding: 0 0.625rem;
+        box-sizing: border-box;
+        margin-left: auto;
+        border-radius: 1.25rem;
+        user-select: none;
+
+
+        &.active{
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+
+            & .catalog-sort__list{
+                height: auto;
+                display: flex;
+            }
+        } 
+    }
+
+    &-sort {
+        &__select {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: $white;
+            font-family: "Nunito";
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1.69rem;
+        }
+
+        &__list{
+            display: flex;
+            flex-direction: column;
+            top: 3.63rem;
+            border-bottom-left-radius: 1.25rem;
+            border-bottom-right-radius: 1.25rem;
+            overflow: hidden;
+            transition: height 0.5s ease;
+        }
+
+        &__item{
+            height: 3.63rem;
+            width: 24.94rem;
+            display: flex;
+            align-items: center;
+            background-color: $gap-gray;
+            box-sizing: border-box;
+            padding: 0 0.625rem;
+            color: $white;
+            font-family: "Nunito";
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1.69rem;
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    &__item {
+        height: 7.5rem;
+        background-color: $gap-gray;
+        border-radius: 1.25rem;
+        display: flex;
+        padding: 0.625rem;
+        box-sizing: border-box;
+        color: $white;
+    }
+
+    &-item {
+        &__img {
+            object-fit: contain;
+            max-width: 100%;
+            max-height: 100%;
+            flex: 1;
+
+            &-wrapper {
+                width: 6.25rem;
+                height: 6.25rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $gray;
+                flex-shrink: 0;
+                border-radius: 1.13rem;
+                margin-right: 0.625rem;
+            }
+        }
+
+        &__right {
+            font-family: "Inter";
+            width: 17.5rem;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            font-size: 0.88rem;
+            font-weight: 400;
+            line-height: 1.06rem;
+            letter-spacing: 0rem;
+            align-items: flex-end;
+        }
+
+        &__downloads {
+            &-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+            }
+        }
+
+        &__likes {
+            &-wrapper {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        &__update,
+        &__versions {
+            opacity: 0.8;
+        }
+
+        &__content {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            font-family: "Nunito";
+        }
+
+        &__title {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.38rem;
+            height: 1.6875rem;
+            flex-shrink: 0;
+        }
+
+        &__name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            line-height: 1.6875rem;
+        }
+
+        &__description {
+            flex: 1;
+            line-height: 1.375rem;
+            max-height: 2.75rem;
+            word-break: break-all;
+            overflow: hidden;
+        }
+
+        &__tags {
+            display: flex;
+            gap: 0.675rem;
+            height: 1.375rem;
+            flex-shrink: 0;
+            opacity: 0.6;
+        }
+    }
+
+    &__pagination {
+        display: flex;
+        justify-content: center;
+        margin: 1.25rem 0;
+    }
+
+    &-pagination {
+
+        &__arrow-left,
+        &__arrow-right {
+            width: 2.5rem;
+            height: 2.5rem;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $gray;
+            border-radius: 1.25rem;
+            cursor: pointer;
+
+            &.disabled{
+                opacity: 0.4;
+            }
+        }
+
+        &__inner {
+            display: flex;
+            gap: 0.625rem;
+            margin: 0 0.625rem;
+        }
+
+        &__item {
+            background-color: $gray;
+            border-radius: 1.25rem;
+            min-width: 2.5rem;
+            height: 2.5rem;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            color: $white-gray;
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 2.25rem;
+            padding: 0 0.75rem;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        &__splitter {
+            display: flex;
+            flex-shrink: 0;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

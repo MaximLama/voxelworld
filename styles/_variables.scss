@@ -1,0 +1,65 @@
+@font-face {
+    font-family: "Nunito";
+    src: url(../fonts/Nunito-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url(../fonts/Nunito-SemiBold.ttf);
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url(../fonts/JetBrainsMono-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url(../fonts/JetBrainsMono-SemiBold.ttf);
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url(../fonts/Poppins-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url(../fonts/Poppins-Medium.ttf);
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(../fonts/Inter-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+$font-size: 16px;
+
+/*Color*/
+$white2: #f5f5f5;
+$white: #fff;
+$black: #202122;
+$dark-gray: #2B2E31;
+$gap-gray: #3B4345;
+$gray: #505455;
+$white-gray: #929495;
+$light-gray: #666A6B;
+$cyan: #6CBCAB;
+
+$page-padding: 8.75rem;
+$header-height: 4.38rem;
+$footer-height: 15rem;

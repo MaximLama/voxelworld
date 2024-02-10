@@ -1,0 +1,61 @@
+.header {
+    display: flex;
+    padding-left: $page-padding;
+    padding-right: $page-padding;
+    align-items: center;
+    background-color: $black;
+    height: $header-height;
+    box-sizing: border-box;
+
+    &__menu {
+        display: flex;
+        list-style: none;
+        gap: 1.875rem;
+    }
+
+    &-menu {
+        &__wrapper {
+            margin: 0 3.125rem;
+        }
+
+        &__link {
+            font-family: "Nunito";
+            color: $white2;
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1.69rem;
+            letter-spacing: 0rem;
+            text-align: center;
+
+            &:hover {
+                border-bottom: 0.13rem solid $cyan;
+            }
+        }
+    }
+
+    &-auth {
+        &__wrapper {
+            margin-left: auto;
+        }
+
+        &__link {
+            color: $white2;
+            font-family: "Nunito";
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 2.06rem;
+            letter-spacing: 0rem;
+            text-align: center;
+
+            &:hover {
+                border-bottom: 0.13rem solid $cyan;
+            }
+        }
+    }
+
+    &__auth {
+        display: flex;
+        list-style: none;
+        gap: 3.125rem;
+    }
+}
