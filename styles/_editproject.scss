@@ -1,0 +1,27 @@
+.project-picture__inner-edit{
+    width: 9.38rem;
+    height: 9.38rem;
+    flex-shrink: 0;
+    background-color: $gray;
+    border-radius: 1.13rem;
+    display: flex;
+}
+
+.edit-btns{
+    &__wrapper{
+        display: flex;
+        gap: 1.25rem;
+    }
+
+    &__save, &__cancel, &__delete{
+        height: 2.5rem;
+        width: 12.5rem;
+        flex-shrink: 0;
+        font-size: 1.25rem;
+        line-height: 1.69rem;
+    }
+
+    &__delete{
+        margin-left: auto;
+    }
+}

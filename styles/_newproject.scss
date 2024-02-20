@@ -1,0 +1,352 @@
+.new-project{
+    width: 70rem;
+    display: flex;
+    flex-shrink: 0;
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+        gap: 1.875rem;
+        flex: 1;
+    }
+}
+
+.project-type{
+    &__label{
+        color: $white2;
+        font-family: 'Inter';
+        font-size: 1.75rem;
+        font-weight: 400;
+        line-height: 2.13rem;
+    }
+    &__inner{
+        display: flex;
+        margin-top: 1.875rem;
+        &.active .project-type__list{
+            display: flex;
+            height: auto;
+        }
+    }
+    &__inner.active &__select{
+        border-radius: 0;
+        border-top-left-radius: 1.25rem;
+        border-top-right-radius: 1.25rem;
+    }
+    &__select{
+        display: flex;
+        flex: 1;
+        height: 3.63rem;
+        background: $gap-gray;
+        border-radius: 1.25rem;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 0 0.625rem;
+
+        & span{
+            color: $white;
+            font-family: 'Nunito';
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1.69rem;
+        }
+    }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        top: 3.63rem;
+        width: 100%;
+        gap: 0;
+        border-bottom-left-radius: 1.25rem;
+        border-bottom-right-radius: 1.25rem;
+    }
+    &__item{
+        background-color: $gap-gray;
+        display: flex;
+        align-items: center;
+        height: 3.63rem;
+        box-sizing: border-box;
+        padding: 0 0.625rem;
+        color: $white;
+        font-family: 'Nunito';
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1.69rem;
+        &:hover{
+            background-color: $dark-gray;
+        }
+    }
+}
+
+.props-group{
+    display: flex;
+}
+
+.project-picture{
+    display: flex;
+    flex-direction: column;
+    &__title{
+        color: $white2;
+        font-family: 'Inter';
+        font-size: 1.75rem;
+        font-weight: 400;
+        line-height: 2.13rem;
+        margin-bottom: 1.875rem;
+    }
+
+    &__img{
+        object-fit: contain;
+        max-width: 100%;
+        max-width: 100%;
+        flex: 1;
+        border-radius: 1.13rem;
+        transition: opacity 0.4s ease;
+    }
+
+    &__inner{
+        width: 9.38rem;
+        height: 9.38rem;
+        flex-shrink: 0;
+        background-color: $gray;
+        border-radius: 1.13rem;
+        display: flex;
+        position: relative;
+        cursor: pointer;
+        transition: background-color 0.4s ease;
+    }
+
+    &__inner:hover &__svg{
+        transform: scale(1.2);
+    }
+
+    &__inner:hover &__img{
+        opacity: 0.2;
+    }
+
+    &__inner:hover{
+        background-color: $black;
+    }
+
+    &__svg{
+        transition: transform 0.4s ease;
+
+        &-wrapper{
+            width: 9.38rem;
+            height: 9.38rem;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 1.13rem;
+        }
+    }
+}
+
+.project-name{
+    margin-left: 3.125rem;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    flex: 1;
+
+    &__title{
+        color: $white2;
+        font-family: 'Inter';
+        font-size: 1.75rem;
+        font-weight: 400;
+        line-height: 2.13rem;
+        margin-bottom: 1.875rem;
+    }
+    &__input{
+        color: $white;
+        font-family: 'Poppins';
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 2.25rem;
+        width: 100%;
+
+        &::placeholder{
+            color: $white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 2.25rem;
+        }
+
+        &-wrapper{
+            height: 3.63rem;
+            background-color: $gap-gray;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            border-radius: 1.25rem;
+            padding: 0 0.625rem;
+        }
+    }
+}
+
+.short-description{
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+    width: 100%;
+
+    &__title{
+        color: $white2;
+        font-family: 'Inter';
+        font-size: 1.75rem;
+        font-weight: 400;
+        line-height: 2.13rem;
+    }
+
+    &__textarea{
+        background: $gap-gray;
+        height: 6.25rem;
+        padding: 0.625rem;
+        box-sizing: border-box;
+        border-radius: 1.25rem;
+        color: $white;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 2.25rem;
+        width: 100%;
+        white-space: pre-wrap;
+        overflow-x: hidden;
+
+        &::placeholder{
+            color: $white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 2.25rem;
+        }
+    }
+}
+
+.project-tags{
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+
+    &__title{
+        color: $white2;
+        font-family: 'Inter';
+        font-size: 1.75rem;
+        font-weight: 400;
+        line-height: 2.13rem;
+    }
+
+    &__inner{
+        display: flex;
+        width: 36.25rem;
+        background: $gap-gray;
+        border-radius: 1.25rem;
+        box-sizing: border-box;
+        padding: 0.625rem;
+        flex-wrap: wrap;
+        gap: 0.625rem;
+    }
+}
+
+.project-tag{
+    display: flex;
+    flex: 0;
+    align-items: center;
+    white-space: nowrap;
+    padding: 0.1875rem 0.625rem;
+    background: $light-gray;
+    border-radius: 0.5rem;
+
+    &__name{
+        color: $white2;
+        font-family: 'Inter';
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+        margin-left: 0.675rem;
+    }
+}
+
+.project-description{
+    display: flex;
+    flex-direction: column;
+    gap: 1.8375rem;
+
+    &__title{
+        color: $white2;
+        font-family: 'Inter';
+        font-size: 1.75rem;
+        font-weight: 400;
+        line-height: 2.13rem;
+    }
+
+    &__textarea{
+        background: $gap-gray;
+        //height: 6.25rem;
+        padding: 0.625rem;
+        box-sizing: border-box;
+        border-radius: 1.25rem;
+        color: $white;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 2.25rem;
+        //width: 100%;
+        //white-space: pre-wrap;
+        //overflow-x: hidden;
+
+        //&::placeholder{
+        //    color: $white;
+        //    font-family: 'Poppins', sans-serif;
+        //    font-size: 1.5rem;
+        //    font-weight: 400;
+        //    line-height: 2.25rem;
+        //}
+    }
+}
+
+.ce-paragraph::before{
+    color: $white!important;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.25rem;
+}
+
+.ce-toolbar__plus{
+    padding-top: 0.2rem;
+    padding-right: 0.3rem;
+    & svg{
+        transform: scale(2);
+        & path{
+            stroke: $white!important;
+        }
+    }
+}
+
+.publish-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12.5rem;
+    height: 3.13rem;
+    background: $gap-gray;
+    border-radius: 1rem;
+    flex-shrink: 0;
+    align-self: center;
+    
+    &__text{
+        color: $white2;
+        font-family: 'Nunito';
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 2.06rem;
+        opacity: 0.6;
+    }
+}

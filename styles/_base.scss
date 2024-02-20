@@ -2,6 +2,22 @@ html {
     font-size: $font-size;
 }
 
+body::-webkit-scrollbar{
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track{
+    width: 0;
+    opacity: 0;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: $black;
+    border-radius: 0.38rem;
+    border: 0.13rem solid $white-gray;
+    opacity: 0.75;
+}
+
 body {
     background: $dark-gray;
 }
@@ -40,28 +56,61 @@ body {
     }
 }
 
-.light-btn{
+.light-btn, .btn-success, .btn-error{
     height: 3.13rem;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 1rem;
-    background-color: $gap-gray;
     color: $white2;
     font-family: 'Nunito';
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 2.06rem;
-    opacity: 0.6;
+    cursor: pointer;
+    & span{
+        opacity: 0.6;
+    }
 
+    &:hover span{
+        opacity: 1;
+    }
+
+    &:active span{
+        opacity: 1;
+    }
+}
+
+.light-btn{
+    background-color: $gap-gray;
     &:hover{
         background-color: $gray;
-        opacity: 1;
     }
 
     &:active{
         background-color: $gap-gray;
-        opacity: 1;
+    }
+}
+
+.btn-success{
+    background-color: $light-green;
+    &:hover{
+        background-color: $dark-green;
+    }
+
+    &:active{
+        background-color: $light-green;
+    }
+}
+
+.btn-error{
+    background-color: $red;
+    &:hover{
+        background-color: $dark-red;
+    }
+
+    &:active{
+        background-color: $red;
     }
 }
 
