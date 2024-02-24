@@ -25,14 +25,14 @@ export default (function(){
             return;
         }
         const targetId = elTabBtn.dataset.targetId;
-        const elTabPane = document.querySelector(`.tab-pane[data-id="${targetId}"]`);
-        if (elTabPane) {
-            const elTabBtnActive = document.querySelector('.tab.active');
-            elTabBtnActive.classList.remove('active');
-            const elTabPaneShow = document.querySelector('.tab-pane.active');
-            elTabPaneShow.classList.remove('active');
+        const elsTabPane = document.querySelectorAll(`.tab-pane[data-id="${targetId}"]`);
+        if (elsTabPane.length) {
+            const elsTabBtnActive = document.querySelectorAll('.tab.active');
+            elsTabBtnActive.forEach((elTabBtnActive) => elTabBtnActive.classList.remove('active'));
+            const elsTabPaneShow = document.querySelectorAll('.tab-pane.active');
+            elsTabPaneShow.forEach((elTabPaneShow) => elTabPaneShow.classList.remove('active'));
             elTabBtn.classList.add('active');
-            elTabPane.classList.add('active');
+            elsTabPane.forEach((elTabPane) => elTabPane.classList.add('active'));
         }
     }
 

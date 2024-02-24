@@ -1,0 +1,417 @@
+.detail{
+    width: 70rem;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 1.875rem 0;
+
+    &__header {
+        height: 9.38rem;
+        display: flex;
+        box-sizing: border-box;
+        color: $white;
+    }
+
+    &-header {
+        &__img {
+            border-radius: 1.13rem;
+            object-fit: contain;
+            max-width: 100%;
+            max-height: 100%;
+            flex: 1;
+
+            &-wrapper {
+                width: 9.38rem;
+                height: 9.38rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $gray;
+                flex-shrink: 0;
+                border-radius: 1.13rem;
+                margin-right: 1.25rem;
+            }
+        }
+
+        &__right {
+            font-family: "Inter";
+            width: 16.875rem;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.19rem;
+            align-items: flex-end;
+            align-self: flex-end;
+        }
+
+        &__downloads {
+            &-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+            }
+        }
+
+        &__likes {
+            &-wrapper {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        &__content {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            font-family: "Nunito";
+            color: $white2;
+        }
+
+        &__title {
+            font-family: 'Inter';
+            font-size: 1.75rem;
+            font-weight: 400;
+            line-height: 2.13rem;
+            flex-shrink: 0;
+        }
+
+        &__description {
+            flex: 1;
+            font-size: 1.13rem;
+            line-height: 1.56rem;
+            max-height: 5.19rem;
+            word-break: break-all;
+            overflow: hidden;
+        }
+
+        &__tags {
+            font-size: 1rem;
+            line-height: 1.375rem;
+            color: $white;
+            display: flex;
+            gap: 0.675rem;
+            height: 1.375rem;
+            flex-shrink: 0;
+            opacity: 0.6;
+        }
+    }
+
+    &__subheader{
+        display: flex;
+        margin-top: 1.875rem;
+    }
+
+    &__tabs{
+        display: flex;
+        background-color: $gap-gray;
+        border-radius: 1rem;
+    }
+    &__tab{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 11.25rem;
+        height: 3.13rem;
+        box-sizing: border-box;
+        cursor: pointer;
+        position: relative;
+
+        &.active .detail-tab__name{
+            border-bottom: 0.13rem solid $cyan;
+        }
+
+        &:not(:last-of-type)::after{
+            position: absolute;
+            content: "";
+            display: block;
+            height: 1.88rem;
+            border-right: 0.13rem solid $gray;
+            opacity: 0.6;
+            right: 0;
+        }
+    }
+
+    &-tab__name{
+        color: $white2;
+        font-family: 'Inter';
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.81rem;
+    }
+
+    &-btn__edit{
+        width: 12.5rem;
+        margin-left: auto;
+    }
+
+    &-btn__like{
+        margin-left: auto;
+    }
+
+    &__container{
+        margin: 1.875rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+
+        &:not(.active){
+            display: none;
+        }
+    }
+
+    &__description{
+        background-color: $gap-gray;
+        word-break: break-all;
+        border-radius: 1.25rem;
+        padding: 0.625rem;
+        color: $white;
+        font-family: 'Poppins', sans-serif;
+        
+        & h1{
+            font-size: 3rem;
+            line-height: 4.5rem;
+        }
+
+        & h2{
+            font-size: 2.38rem;
+            line-height: 3.56rem;
+        }
+
+        & p{
+            font-size: 1.38rem;
+            line-height: 2.06rem;
+        }
+    }
+
+    &-versions{
+        &__wrapper.active{
+            display: flex;
+            align-items: center;
+            margin-left: 1.25rem;
+        }
+        &__wrapper:not(.active){
+            display: none;
+        }
+
+        &__label{
+            color: $white2;
+            font-family: 'Inter';
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 1.81rem;
+            margin-right: 1.25rem;
+        }
+
+        &__select-inner{
+            display: flex;
+            &.active .detail-versions__list{
+                display: flex;
+                height: auto;
+            }
+        }
+        &__select-inner.active &__select{
+            border-radius: 0;
+            border-top-left-radius: 1.25rem;
+            border-top-right-radius: 1.25rem;
+        }
+        &__select{
+            display: flex;
+            height: 3.13rem;
+            width: 9.38rem;
+            background: $gap-gray;
+            border-radius: 1.25rem;
+            align-items: center;
+            justify-content: space-between;
+            box-sizing: border-box;
+            padding: 0 0.625rem;
+    
+            & span{
+                color: $white;
+                font-family: 'Nunito';
+                font-size: 1.25rem;
+                font-weight: 400;
+                line-height: 1.69rem;
+            }
+        }
+        &__list{
+            display: flex;
+            flex-direction: column;
+            top: 3.13rem;
+            width: 100%;
+            gap: 0;
+            border-bottom-left-radius: 1.25rem;
+            border-bottom-right-radius: 1.25rem;
+        }
+        &__item{
+            background-color: $gap-gray;
+            display: flex;
+            align-items: center;
+            height: 3.13rem;
+            box-sizing: border-box;
+            padding: 0 0.625rem;
+            color: $white;
+            font-family: 'Nunito';
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1.69rem;
+            &:hover{
+                background-color: $dark-gray;
+            }
+        }
+    }
+
+    &-btn__new-version{
+        margin-bottom: 1.25rem;
+    }
+
+    &-project{
+        
+        &__versions{
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        &__version{
+            display: flex;
+            flex-direction: column;
+            min-height: 6.25rem;
+            box-sizing: border-box;
+            background-color: $gap-gray;
+            border-radius: 1.25rem;
+            padding: 1.25rem;
+
+            &--main{
+                display: flex;
+            }
+
+            &--left{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                width: 19.31rem;
+                gap: 0.25rem;
+            }
+
+            &--center{
+                display: flex;
+                gap: 3rem;
+                color: $white2;
+                font-family: 'Nunito';
+                font-size: 1.5rem;
+                font-weight: 400;
+                line-height: 2.06rem;
+            }
+            &--right{
+                display: flex;
+                margin-left: auto;
+                justify-content: center;
+                align-items: center;
+            }
+
+            &--more{
+                display: none;
+                margin-top: 1.25rem;
+                border-top: 0.13rem solid $light-gray;
+                padding-top: 0.625rem;
+
+                &.active{
+                    display: block;
+                }
+            }
+
+            &-description{
+                color: $white2;
+                font-family: 'Nunito';
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.38rem;
+                opacity: 0.8;
+                word-break: break-all;
+            }
+        }
+
+        &__download{
+            display: flex;
+            height: 3.75rem;
+            width: 3.75rem;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+            background-color: $lime;
+            border-radius: 0.5rem;
+        }
+
+        &__number{
+            color: $white2;
+            font-family: 'Inter';
+            font-size: 1.75rem;
+            font-weight: 400;
+            line-height: 2.13rem;
+
+            &-wrapper{
+                display: flex;
+                flex-direction: column;
+            }
+
+            &-title{
+                &--alpha{
+                    color: $light-red;
+                    font-family: 'Inter';
+                    font-size: 1.75rem;
+                    font-weight: 400;
+                    line-height: 2.13rem;
+                }
+                &--beta{
+                    color: $yellow;
+                    font-family: 'Inter';
+                    font-size: 1.75rem;
+                    font-weight: 400;
+                    line-height: 2.13rem;
+                }
+                &--release{
+                    color: $lime;
+                    font-family: 'Inter';
+                    font-size: 1.75rem;
+                    font-weight: 400;
+                    line-height: 2.13rem;
+                }
+            }
+        }
+        
+        &__support-wrapper, &__publish-wrapper{
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__btns{
+            display: flex;
+            margin-top: 0.9375rem;
+            gap: 1.25rem;
+        }
+
+        &__btn{
+            &-save{
+                width: 12.5rem;
+                height: 2.5rem;
+                font-size: 1.25rem;
+                line-height: 1.69rem;
+            }
+            &-cancel{
+                width: 12.5rem;
+                height: 2.5rem;
+                font-size: 1.25rem;
+                line-height: 1.69rem;
+            }
+            &-delete{
+                margin-left: auto;
+                width: 12.5rem;
+                height: 2.5rem;
+                font-size: 1.25rem;
+                line-height: 1.69rem;
+            }
+        }
+    }
+}

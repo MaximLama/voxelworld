@@ -308,7 +308,11 @@
         //    font-weight: 400;
         //    line-height: 2.25rem;
         //}
-    }
+
+    }::selection, .ce-block--selected .ce-block__content [contenteditable]  {
+             background-color: #808080;
+             //color: #ffffff;
+         }
 }
 
 .ce-paragraph::before{
@@ -329,6 +333,9 @@
         }
     }
 }
+.ce-inline-toolbar__toggler-and-button-wrapper, .cdx-search-field__input, .ce-conversion-tool, .ce-inline-tool-input--showed{
+    color:$gap-gray
+}
 
 .publish-btn{
     display: flex;
@@ -340,7 +347,7 @@
     border-radius: 1rem;
     flex-shrink: 0;
     align-self: center;
-    
+
     &__text{
         color: $white2;
         font-family: 'Nunito';
