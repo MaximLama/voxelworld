@@ -1,0 +1,22 @@
+.error{
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    font-family: 'Poppins', sans-serif;
+    gap: 0.625rem;
+    
+    &__title{
+        font-size: 4rem;
+        font-weight: 600;
+        line-height: 6rem;
+    }
+
+    &__subtitle{
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 1.88rem;
+    }
+}
