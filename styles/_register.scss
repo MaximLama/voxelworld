@@ -1,0 +1,50 @@
+.register{
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+    align-self: center;
+    width: 44.88rem;
+    flex-shrink: 0;
+    margin: 10.5rem 0;
+
+    &__inner{
+        display: flex;
+        gap: 1.25rem;
+        flex: 1;
+    }
+
+    &__photo{
+        width: 8.75rem;
+        height: 8.75rem;
+        flex: 1;
+        flex-shrink: 0;
+        border-radius: 50%;
+
+        &-wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__name, &__email, &__password{
+        &-wrapper{
+            display: flex;
+            gap: 1.875rem;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        &-label{
+            color: $white2;
+            font-family: 'Inter';
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 1.81rem;
+        }
+    }
+
+    &__submit{
+        width: 16.25rem;
+    }
+}
