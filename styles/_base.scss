@@ -2,16 +2,16 @@ html {
     font-size: $font-size;
 }
 
-body::-webkit-scrollbar{
+*::-webkit-scrollbar{
     width: 10px;
 }
 
-body::-webkit-scrollbar-track{
+*::-webkit-scrollbar-track{
     width: 0;
     opacity: 0;
 }
 
-body::-webkit-scrollbar-thumb{
+*::-webkit-scrollbar-thumb{
     background-color: $black;
     border-radius: 0.38rem;
     border: 0.13rem solid $white-gray;
