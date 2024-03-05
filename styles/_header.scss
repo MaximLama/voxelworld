@@ -6,6 +6,7 @@
     background-color: $black;
     height: $header-height;
     box-sizing: border-box;
+    position: relative;
 
     &__menu {
         display: flex;
@@ -87,5 +88,68 @@
     &__more{
         background-color: inherit;
         cursor: pointer;
+    }
+
+    &__popup{
+        display: none;
+        position: absolute;
+        width: 18.75rem;
+        height: 10.5rem;
+        z-index: 100;
+        background-color: $alt-gray;
+        border-radius: 1.25rem;
+        right: calc($page-padding);
+        bottom: -11.125rem;
+        color: $white2;
+        font-family: 'Nunito';
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 2.06rem;
+    }
+
+    &__popup.active{
+        display: flex;
+    }
+
+    &__links{
+        list-style: none;
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        align-items: stretch;
+
+        &-item{
+            position: relative;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            &:not(:last-of-type)::after{
+                content: '';
+                display: block;
+                width: 17.5rem;
+                border: 0.13rem solid $white-gray;
+                border-radius: 1.25rem;
+                position: absolute;
+                bottom: -0.065rem;
+                z-index: 101;
+            }
+
+            &:hover{
+                background-color: $light-gray;
+            }
+
+            &:first-of-type:hover{
+                border-top-left-radius: 1.25rem;
+                border-top-right-radius: 1.25rem;
+            }
+
+            &:last-of-type:hover{
+                border-bottom-left-radius: 1.25rem;
+                border-bottom-right-radius: 1.25rem;
+            }
+        }
     }
 }
