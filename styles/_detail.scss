@@ -168,20 +168,84 @@
         padding: 0.625rem;
         color: $white;
         font-family: 'Poppins', sans-serif;
-        
-        & h1{
-            font-size: 3rem;
-            line-height: 4.5rem;
-        }
-
-        & h2{
-            font-size: 2.38rem;
-            line-height: 3.56rem;
-        }
 
         & p{
             font-size: 1.38rem;
             line-height: 2.06rem;
+        }
+
+        & b{
+            font-weight: 700;
+        }
+
+        & i{
+            font-style: italic;
+        }
+
+        & a{
+            color: $light-blue;
+            text-decoration: none;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+
+        & code{
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            border-left: 3px solid #f36d33;
+            color: #666;
+            page-break-inside: avoid;
+            font-family: monospace;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.6rem;
+            max-width: 100%;
+            overflow: auto;
+            padding: 1rem 1.5rem;
+            display: block;
+            word-wrap: break-word;
+        }
+
+        & h1{
+            font-size: 3.25rem;
+            line-height: 4.44rem;
+            font-style: 700;
+        }
+
+        & h2{
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 4.06rem;
+        }
+
+        & h3{
+            font-size: 2.75rem;
+            font-weight: 600;
+            line-height: 3.75rem;
+        }
+
+        & h4{
+            font-size: 2.5rem;
+            font-weight: 600;
+            line-height: 3.44rem;
+        }
+
+        & h5{
+            font-size: 2.25rem;
+            font-weight: 400;
+            line-height: 3.06rem;
+        }
+
+        & h6{
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 2.75rem;
+        }
+
+        & ul,& ol{
+            padding-left: 1rem;
         }
     }
 
